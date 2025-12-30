@@ -1,0 +1,77 @@
+html{
+  color: #FFFF;
+  /* stylelint-disable-next-line font-family-name-quotes */
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+body {
+  margin: 0;
+}
+
+@media (max-width: 350px) {
+  .header {
+    padding: 16px 8px 64px;
+    background-size: cover;
+  }
+  .header__title {
+    font-size: 28px;
+  }
+}
+
+
+.header {
+  height: 100vh;
+  background-image: url(/images/header-bg-mobile.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  padding: 20px 24px 88px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.header__icons{
+  display: flex;
+  gap: 24px;
+}
+
+.icon{
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.icon--phone{
+  background-image: url(/icons/icon-phone-call.png);
+}
+
+.icon--menu{
+  background-image: url(/icons/icon-burger-menu.png);
+}
+
+
+.header__title {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  text-align: center;
+  vertical-align: middle;
+  color: #FFFF;
+
+}
+
