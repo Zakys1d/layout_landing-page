@@ -1,0 +1,148 @@
+.details {
+  // if parent is grid — force full width so it won't become a skinny column
+  grid-column: 1 / -1;
+
+  &__wrapper {
+    display: grid;
+    row-gap: 40px;
+
+    @include on-tablet {
+      row-gap: 48px;
+    }
+
+    @include on-desktop {
+      row-gap: 56px;
+      max-width: 1020px;
+      margin-inline: auto;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 278px;
+    height: 56px;
+    margin: 40px auto 0;
+
+    padding-inline: 48px;
+    border-radius: 40px;
+
+    background-color: #fff;
+    color: #1d1d1d;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-decoration: none;
+    user-select: none;
+
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      background-color 0.15s ease,
+      color 0.15s ease;
+
+    /* DEFAULT */
+    box-shadow: none;
+
+    /* HOVER */
+    &:hover {
+      box-shadow: 0 4px 16px rgba(232, 232, 240, 0.64);
+      transform: translateY(-1px);
+    }
+
+    /* PRESSED */
+    &:active {
+      box-shadow: 0 2px 8px rgba(232, 232, 240, 0.64);
+      transform: translateY(0);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.4),
+        0 4px 16px rgba(232, 232, 240, 0.64);
+    }
+  }
+
+.detail {
+  &__photos {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 16px;
+
+    // mobile default: wide + square (same row)
+    grid-template-columns: 2fr 1fr;
+
+    @include on-tablet {
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__link {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // default heights
+  &__link--wide,
+  &__link--square {
+    height: 180px;
+
+    @include on-tablet {
+      height: 240px;
+    }
+
+    @include on-desktop {
+      height: 320px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #fff;
+  }
+
+  &__description {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+  }
+
+  // ✅ 1) wide left + square right (your first row)
+  &--wide-left {
+    .detail__photos {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  // ✅ 2) two equal images (your second row)
+  &--two-equal {
+    .detail__photos {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  // ✅ 3) square left + wide right (your third row)
+  &--wide-right {
+    .detail__photos {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
+}

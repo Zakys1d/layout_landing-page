@@ -4,34 +4,35 @@
   background-position: top right;
   background-repeat: no-repeat;
 
-  box-sizing: border-box;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    text-align: center;
+    color: #fff;
 
-.header__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 100%;
-  letter-spacing: -1.5px;
-  text-align: center;
-  color: #ffff;
-}
+    @include on-tablet {
+      font-size: 40px;
 
-.header__bottom {
-  padding: 0 20px 40px;
-}
+    }
+  }
 
-@media (max-width: 480px) {
-  .header {
+  &__bottom {
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
     height: 480px;
   }
+
 }
+
+
