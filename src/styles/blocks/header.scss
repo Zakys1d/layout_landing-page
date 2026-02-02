@@ -4,6 +4,7 @@
   background-position: top right;
   background-repeat: no-repeat;
 
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -23,6 +24,11 @@
       font-size: 40px;
 
     }
+
+    @include on-desktop {
+      font-size: 80px;
+      padding-top: 300px;
+    }
   }
 
   &__bottom {
@@ -31,6 +37,10 @@
 
   @media (max-width: 480px) {
     height: 480px;
+  }
+
+  @include on-desktop{
+    height: 700px;
   }
 
 }
