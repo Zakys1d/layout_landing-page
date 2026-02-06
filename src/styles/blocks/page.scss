@@ -5,9 +5,7 @@
   line-height: 140%;
   scroll-behavior: smooth;
 
-  &__:has(.page__menu:target) {
-      overflow: hidden; /* not to scroll the page */
-    }
+
 
   &__body {
     margin: 0;
@@ -24,6 +22,8 @@
     right: 0;
     left: 0;
     box-sizing: border-box;
+    height: 100vh;
+    overflow-y: auto;
 
     opacity: 0;
     transition: all 0.3s;
@@ -38,4 +38,15 @@
       pointer-events: all;
     }
   }
+
+  &:has(.page__menu:target) .page__body {
+    overflow: hidden;
+  }
+
+   &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+
+
 }
+
