@@ -5,8 +5,6 @@
   line-height: 140%;
   scroll-behavior: smooth;
 
-
-
   &__body {
     margin: 0;
     overflow-x: hidden;
@@ -44,10 +42,7 @@
     overflow: hidden;
   }
 
-   &:has(.page__menu:target) {
+  &:has(.page__menu:target) {
     overflow: hidden;
   }
-
-
 }
-

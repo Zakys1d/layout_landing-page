@@ -4,13 +4,11 @@
   background-position: top right;
   background-repeat: no-repeat;
 
-
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
 
   &__title {
     font-weight: 700;
@@ -22,7 +20,6 @@
 
     @include on-tablet {
       font-size: 40px;
-
     }
 
     @include on-desktop {
@@ -39,10 +36,7 @@
     height: 480px;
   }
 
-  @include on-desktop{
+  @include on-desktop {
     height: 100vh;
   }
-
 }
-
-
